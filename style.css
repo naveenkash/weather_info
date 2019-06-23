@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.weather {
+    width: 100%;
+    height: auto;
+    /* background-image: linear-gradient(to top right, rgb(63, 246, 252), rgb(71, 45, 187)); */
+    /* position: relative; */
+}
+
+.search-input {
+    padding-top: 80px;
+    width: 450px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+}
+
+#in-hd {
+    margin-right: 8px;
+    /* background: linear-gradient(to right, red, orange);
+    letter-spacing: 2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+    font-weight: bold; */
+}
+
+nav {
+    width: 200px;
+    height: auto;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(173, 216, 230, 0.103);
+    z-index: -1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    width: 200px;
+    height: 100%;
+    float: left;
+    z-index: 100;
+    position: relative;
+}
+
+.burger {
+    width: 42px;
+    height: 29px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid white; */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.burger1 {
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+.burger2 {
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+.burger3 {
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+.nav-con {
+    width: 200px;
+    height: 100vh;
+    /* display: none; */
+    position: fixed;
+    top: 49px;
+    left: -300px;
+    /* padding-left: 10px; */
+    background: #1C2529;
+}
+
+.nav-h {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    background: #4560CB;
+}
+
+#navbar-wrapper {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1C2529;
+    z-index: 100;
+}
+
+
+
+.nav-h span {
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.nav-wrapper {
+    width: 100%;
+    height: auto;
+    background: #1C2529;
+}
+
+.nav-wrapper ul {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-wrapper ul li {
+    list-style-type: none;
+    border-bottom: 1px solid rgb(62, 66, 75);
+    padding: 8px;
+    color: rgb(182, 190, 190);
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.addBrush {
+    animation: slide .2s linear forwards;
+    opacity: 0;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        left: -300px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.hidebrush {
+    animation: slideOut 0.2s linear forwards;
+    opacity: 0;
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+    100% {
+        opacity: 0;
+        left: -300px;
+    }
+}
+
+.nav-wrapper ul li:hover {
+    /* border-bottom: 1px solid rgb(116, 113, 113); */
+    /* color: white; */
+    background: linear-gradient(to right, red, orange);
+    /* letter-spacing: 2px; */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+    
+    font-weight: bold;
+}
+
+.input-wrapper {
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    align-items: center;
+    grid-template-columns: 0.1fr 1fr; */
+}
+
+.input-wrapper2, .input-wrapper3 {
+    display: none;
+}
+
+.input-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.1fr 1fr;
+}
+
+.input-container2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.2fr 1fr;
+}
+
+.input-container3 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.22fr 1fr;
+}
+
+.input-container input, .input-container2 input, .input-container3 input {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid rgba(22, 21, 21, 0.671);
+    outline: none;
+    border-radius: 20px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+#srhBtn {
+    padding: 11px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right ,orange , red);
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+/* #srhBtn:hover {
+    background-image: linear-gradient(to right , red, orange);
+} */
+
+.weather-wrapper {
+    width: 500px;
+    margin: 0px auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    /* background-image: linear-gradient(to top right, rgb(63, 246, 252), rgb(71, 45, 187)); */
+    padding: 0 6px 10px 10px;
+    /* background: #1C2529; */
+    display: none;
+}
+
+.temp {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.location {
+    width: 65%;
+    float: left;
+}
+
+.location h1 {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.tempDegree {
+    width: 35%;
+    height: auto;
+    float: right;
+    position: relative;
+}
+
+.weatherData {
+    float: left;
+    width: 50%;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.weatherData svg {
+    width: 21px;
+    height: 21px;
+    margin-right: 3px;
+    fill: #1C2529;
+}
+
+.weatherData h4 {
+    /* font-weight: lighter; */
+    background: linear-gradient(to right, orange, red);
+    letter-spacing: 1px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+}
+
+.gradientText {
+    background: linear-gradient(to right, orange, red);
+    letter-spacing: 2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+}
+
+#tempNow {
+    font-size: 3.5em;
+    text-align: right;
+    font-weight: lighter;
+}
+
+#weatherDescription {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 13px;
+}
+
+.weather-wrapper table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+}
+
+.weather table tr {
+    width: 100%;
+    height: auto;
+}
+
+.weather table tr td {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid rgba(43, 42, 42, 0.521); */
+    padding: 10px;
+    /* background: white; */
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.chartWrapper{
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    display: none;
+}

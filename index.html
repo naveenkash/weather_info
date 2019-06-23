@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Api</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"> -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <div class="weather">
+        <div id="navbar-wrapper">
+            <nav class="clearfix">
+                <div class="navbar">
+                    <div class="burger">
+                        <div class="burger1"></div>
+                        <div class="burger2"></div>
+                        <div class="burger3"></div>
+                    </div>
+
+                    <div class="nav-con">
+                        <div class="nav-h">
+                            <span>Search By</span>
+                        </div>
+                        <div class="nav-wrapper">
+                            <ul>
+                                <li id="cityli" >City</li>
+                                <li id="zip" >Zip Code</li>
+                                <li id="lat_lon">Latitude & Longitude</li>
+                            </ul>
+                        </div>
+                        <div class="nav-h">
+                            <span>Temprature In</span>
+                        </div>
+                        <div class="nav-wrapper">
+                            <ul>
+                                <li id="celsius" >Celsius</li>
+                                <li id="fahrenheit" >Fahrenheit</li>
+                                <li id="kelvin">Kelvin</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <div class="search-input">
+            <div class="input-wrapper">
+                <div class="input-container">
+                    <span id="in-hd">City</span> <input id="search" type="text" placeholder="City">
+                    <span id="in-hd">Country</span> <input class="input" id="searchCountry" type="text"
+                        placeholder="Country (optional)">
+                </div>
+            </div>
+            <div class="input-wrapper2">
+                <div class="input-container2">
+                    <span id="in-hd">Latitude</span>
+                    <input class="input" id="searchLat" type="text" placeholder="Latitude">
+                    <span id="in-hd">Longitude</span> <input class="input" id="searchLon" type="text"
+                        placeholder="Longitude">
+                </div>
+            </div>
+            <div class="input-wrapper3">
+                <div class="input-container3">
+                    <span id="in-hd">ZIP Code</span> <input class="input" id="searchZIP" type="text"
+                        placeholder="ZIP Code">
+                    <span id="in-hd">Country</span> <input class="input" id="searchzipcountry" type="text"
+                        placeholder="Country Code ex:(USA:us,India:in)">
+                </div>
+            </div>
+            <button type="button" id="srhBtn">Search</button>
+        </div>
+        <div class="weather-wrapper">
+            <div class="over-circle"></div>
+            <div class="temp clearfix">
+                <div class="location">
+                    <h1 id="city" class="gradientText"></h1>
+                    <h1 id="country"></h1>
+                </div>
+                <div class="tempDegree">
+                    <h1 id="tempNow" class="gradientText"></h1>
+                    <span id="weatherDescription" class="gradientText"></span>
+                </div>
+            </div>
+
+            <!-- <table id="weatherTable">
+            </table> -->
+            <div id="weatherTable" class="clearfix">
+            </div>
+        </div>
+        <div class="chartWrapper">
+            <canvas id="myChart" width="1200px" height="500px"></canvas>
+        </div>
+    </div>
+    <script src="./moment.locale.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
